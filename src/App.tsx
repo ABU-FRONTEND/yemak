@@ -1,7 +1,8 @@
+import Header from "./components/Header/Header"
 const App: React.FC = (): JSX.Element => {
     return (
-        <div className="container px-2">
-            <h1>Hello, World!</h1>
+        <div className='text-[40px]'>
+            <Header/>
         </div>
     )
 }
