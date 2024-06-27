@@ -2,7 +2,7 @@ import Header from "./components/Header/Header"
 const App: React.FC = (): JSX.Element => {
     return (
         <div className='text-[40px]'>
-            <Header />
+            <Header/>
         </div>
     )
 }
