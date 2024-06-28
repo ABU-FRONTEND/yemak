@@ -8,7 +8,11 @@ export default {
         extend: {
             backgroundImage: {
                 'header': "url('./src/assets/img/header-bg.jpg')",
-            }
+            },
+            fontFamily: {
+                'comfortaa': ['Comfortaa', 'sans-serif'],
+                'open-sans': ['Open Sans', 'sans-serif'],
+            },
         },
     },
     plugins: [],
