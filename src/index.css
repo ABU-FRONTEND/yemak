@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 * {
     margin: 0;
     padding: 0;
+=======
+*{
+    padding: 0;
+    margin: 0;
+>>>>>>> c6b7150d1e7b2dd2bff25fcec4944975c495cb4f
     box-sizing: border-box;
 }
