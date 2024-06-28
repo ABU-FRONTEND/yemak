@@ -1,11 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
     content: [
         "./index.html",
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'header': "url('./src/assets/img/header-bg.jpg')"
+            },
+            fontFamily: {
+                'open-sans': ['Open Sans', 'sans-serif'],
+                'comfortaa': ['Comfortaa', 'cursive'],
+            }
+        },
     },
     plugins: [],
 }
