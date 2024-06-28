@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState, AppDispatch } from '../../app/store';
 import { setOpen } from '../../features/modal/modalSlice';
+import MaskedInput from "react-text-mask";
 
 export const Register: React.FC = (): JSX.Element => {
     const isOpen = useSelector((state: RootState) => state.modal.isOpen);
@@ -9,7 +10,7 @@ export const Register: React.FC = (): JSX.Element => {
     return (
         <>
             {isOpen ?
-                <div className="absolute top-0 left-0 h-full w-full bg-[#0000004d] backdrop-blur-[5px] z-10 flex flex-col justify-center items-center">
+                <div className="absolute top-0 left-0 h-full w-full bg-[#0000004d] backdrop-blur-[5px] flex flex-col justify-center items-center">
                     <div className="flex flex-col w-[100%] max-w-[40%] p-[1rem] rounded-[6px] bg-white items-center h-[184px]">
                         <form className="flex flex-col w-full">
                             <div className="flex items-center justify-between">
@@ -21,7 +22,32 @@ export const Register: React.FC = (): JSX.Element => {
                                 </span>
                             </div>
                             <hr className="w-full h-0 my-3 border-0 border-t-[1px] border-[#eee]" />
-                            <input className="w-full border-[1px] mb-[0.375rem] border-[#ccc] h-[48px] rounded-[6px] text-lg outline-none px-[1rem]" type="text" placeholder="+998 90 123 45 67" />
+                            <MaskedInput
+                                mask={[
+                                    "+",
+                                    "9",
+                                    "9",
+                                    "8",
+                                    " ",
+                                    "(",
+                                    /\d/,
+                                    /\d/,
+                                    ")",
+                                    " ",
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    "-",
+                                    /\d/,
+                                    /\d/,
+                                    "-",
+                                    /\d/,
+                                    /\d/,
+                                ]}
+                                placeholder="+998 (__) ___-__-__"
+                                type="tel"
+                                className="w-full border-[1px] mb-[0.375rem] border-[#ccc] h-[48px] rounded-[6px] text-lg outline-none px-[1rem]"
+                            />
                             <button className="w-full h-[40px] rounded-[6px] text-lg bg-[#ffdd59] font-semibold">Tasdiqlash</button>
                         </form>
                     </div>
